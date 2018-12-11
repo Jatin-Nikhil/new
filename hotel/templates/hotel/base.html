@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" />
+<script src="{% static 'scripts/jquery.slicknav.min.js' %}" type = "text/javascript"></script>
+<title>{% block title %}{% endblock %}</title>
+<meta name="keywords" content="Hotel, Rooms, Rent, Night, Motel" />
+<meta name="description" content="Web page of a a hotel company" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% block header %}
+{% endblock %}
+
+</head>
+<body>
+<header>
+	<h1><a href="{% url 'index' %}">Hotel Europa</a></h1>
+	<nav id = "">
+		<ul id = "menu">
+			<li><a href="{% url 'index' %}">Homepage</a></li>
+			<li><a href="{% url 'offer' %}">Our Offer</a></li>
+			<li><a href="{% url 'gallery' %}" >Gallery</a></li>
+			<li><a href="{% url 'bookRoom' %}">Book A Room</a></li>
+			<!--{% block login %}
+				{% if user.is_authenticated %}
+					<li><a href ="#">My bookings</a></li>
+					<li><a href="{% url 'logout' %}">Logout</a></li>
+				{% else %}
+					<li><a href="{% url 'login' %}">Sign in</a></li>
+				{% endif %}
+			{% endblock %}-->
+			<li><a href="{% url 'contact' %}">Contact Us</a></li>
+	    </ul>
+	</nav>
+	<div id = "demo1">
+	</div>
+</header>
+<main>
+	{% block img %}
+	{% endblock %}
+	{% block main %}
+	{% endblock %}
+</main>
+<footer>
+	<p>&copy; Hotel Europa. All rights reserved.</p>
+</footer>
+<script>
+ 	$('#menu').slicknav({
+		prependTo:'#demo1'
+	});
+</script>
+</body>
+</html>

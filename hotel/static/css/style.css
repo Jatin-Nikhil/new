@@ -1,0 +1,156 @@
+html, body {
+	height: 100%;
+	font-size: 100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #22222D;
+	font-family: 'Open Sans', sans-serif;
+	color: #545454;
+}
+h1, h2, h3 {
+	padding: 0px;
+	margin: 0px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a img {
+	border: none;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+header {
+	background-color: #000000;
+}
+header h1{
+	padding: 5px 5px 0px 15px;
+	font-weight: 300;
+	font-size: 2.5em;
+}
+p {
+	padding-top: 5px;
+	margin: 0px;
+}
+
+footer {
+	background-color: black;
+	text-align: center;
+	clear: both;
+}
+#center {
+	text-align: center;
+}
+#center form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#center label {
+	display: block
+}
+#center input {
+	display: block
+}
+
+
+@media (min-width: 800px) {
+main {
+	width: 100%;
+	background-color: white;	
+	float: left;
+	padding: 15px;
+	box-sizing: border-box; 
+}
+#img {
+	width: 30%;
+	float: right;
+}
+nav {
+	background-color: black;
+	text-align: right;
+}
+nav a{
+	padding: 0px 5px 5px 5px;
+}
+ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+}
+li {
+	float: left;
+}
+
+.slicknav_menu {
+	display: none;
+}
+#offer {
+	text-align: center;
+	width: 33%;
+	float: left;
+}
+#offer a {
+	color: #545454;
+}
+#offer h4 {
+	margin: 5px;
+}
+
+}
+
+
+
+@media (max-width: 800px) {
+header {
+	text-align: center;
+}
+main {
+	width: 100%;
+	background-color: white;	
+	padding: 15px;
+	box-sizing: border-box; 
+}
+#img{
+	display: none;
+}
+nav {
+	display: none;
+}
+.slicknav_menu {
+	background: transparent;
+	z-index: 1000;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+.slicknav_btn {
+	display: inline-block;
+	text-align: center;
+	float: none;
+}
+#offer {
+	text-align: center;
+	width: 100%;
+	margin-top: 30px;
+}
+#offer a {
+	color: #545454;
+}
+#offer h4 {
+	margin: 5px;
+}
+}
+
+
+
+
+

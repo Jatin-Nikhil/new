@@ -1,0 +1,42 @@
+{% extends "hotel/base.html" %}
+{% load static %}
+
+{% block title %}Gallery Hotel Europa{% endblock %}
+
+{% block main %}
+	<div id = "center">
+		<h1><strong>Gallery</h1>
+		<p>Restaurant</p>
+
+		{% for x in i %}
+				<img src = "{% static 'img/' %}{{x}}.jpg">
+		{% endfor %}
+					<!--
+						images from "http://hotel-atrium.pl/"
+					-->
+
+		<p>Room Casual</p>
+		{% for x in p %}
+				<a href = "{% url 'offer' %}"><img src = "{% static 'img/' %}casual{{x}}.jpg"></a>
+		{% endfor %}
+					<!--
+						images from "http://hotel-atrium.pl/"
+					-->
+
+		<br/><p>Room Premium</p>
+		{% for x in p %}
+				<a href = "{% url 'offer' %}"><img src = "{% static 'img/' %}premium{{x}}.jpg"></a>
+		{% endfor %}
+					<!--
+						images from "http://hotel-atrium.pl/"
+					-->
+					
+		<br/><p>Room Studio</p></strong>
+		{% for x in p %}
+				<a href = "{% url 'offer' %}"><img src = "{% static 'img/' %}studio{{x}}.jpg"></a>
+		{% endfor %}
+					<!--
+						images from "http://hotel-atrium.pl/"
+					-->
+	</div>
+{% endblock %}

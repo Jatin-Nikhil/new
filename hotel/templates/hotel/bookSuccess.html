@@ -1,0 +1,17 @@
+{% extends "hotel/base.html" %}
+{% load static %}
+
+{% block title %} Succesful Booking Hotel Europa{% endblock %}
+
+{% block main %}
+	<div id = "login">
+		<h2><strong>Thanks for entrusting us!</strong></h2>
+    	<h2><strong>Reservation number: {{ receipts.reservationID }}</strong></h2>
+    	<h2><strong>Name: {{ receipts.name }}</strong></h2>
+    	<h2><strong>Surname: {{ receipts.surname }}</strong></h2>
+    	<h2><strong>Book in date: {{ receipts.bookIn }}</strong></h2>
+    	<h2><strong>Book out date: {{ receipts.bookOut }}</strong></h2>
+    	<h2><strong>Price: {{ receipts.price }}</strong></h2>
+	</div>
+{% endblock %}
+	

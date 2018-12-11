@@ -1,0 +1,19 @@
+{% extends "hotel/base.html" %}
+{% load static %}
+
+{% block title %}Home Page Hotel Europa{% endblock %}
+
+{% block img %}
+	<div id = "img">
+		<img src = "{% static 'img/img1.jpg' %}">
+		<!--
+					img from "http://hanzatower.pl/"
+				-->
+	</div>
+{% endblock %}
+{% block main %}
+	{% for hotel in hotels %}
+		<h2><strong>Hotel {{hotel.name}}</strong></h2>
+		<p>{{hotel.description}}</p>
+	{% endfor %}
+{% endblock %}

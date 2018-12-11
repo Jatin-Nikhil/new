@@ -1,0 +1,24 @@
+{% extends "hotel/base.html" %}
+{% load static %}
+
+{% block title %} Book A Room Hotel Europa{% endblock %}
+
+{% block header %}
+<script>
+$( function() {
+$( "#id_bookIn" ).datepicker({ minDate: 0, maxDate: "+24M", dateFormat: 'dd.mm.yy',});
+$( "#id_bookOut" ).datepicker({ minDate: 0, maxDate: "+24M", dateFormat: 'dd.mm.yy',});
+} );
+</script>
+{% endblock %}
+{% block main %}
+	<div id = "center">
+   		<h2><strong>Book a Room</h2></strong>
+   		<form method="POST" class="post-form">
+    		{% csrf_token %}
+       		{{ form.as_p }}
+        	<button type="submit">Book it</button>
+    	</form>
+    </div>
+{% endblock %}
+	

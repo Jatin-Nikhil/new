@@ -1,0 +1,24 @@
+{% extends "hotel/base.html" %}
+{% load static %}
+
+{% block title %}Offer Hotel Europa{% endblock %}
+
+{% block main %}
+	{% for hotel in hotels %}
+		<h2><strong>Hotel {{hotel.name}}</strong></h2>
+		<h3>Our rooms</h3><br/>
+	{% endfor %}
+	{% for room in rooms %}
+		<div id = "offer">
+			<a class="gallery" href="{% static 'img/' %}{{room.name}}.jpg"><img src = "{% static 'img/' %}mini{{room.name}}.jpg"></a>
+			<a href = "{% url 'gallery' %}"><h4><strong>Room type {{room.name}} </strong></h4></a>
+			<p>{{room.description}}<br/>
+			It's a room for {{room.capacity}} persons<br/>
+			<strong>The price is {{room.price}} zł for a night</p></strong>
+			<!--
+				img from "http://hotel-atrium.pl/"
+			-->
+		</div>
+	{% endfor %}
+{% endblock %}
+		

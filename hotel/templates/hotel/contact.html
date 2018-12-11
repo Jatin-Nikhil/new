@@ -1,0 +1,22 @@
+{% extends "hotel/base.html" %}
+{% load static %}
+
+{% block title %}Contact Hotel Europa{% endblock %}
+{% block img %}
+	<div id = "img">
+		<img src = "{% static 'img/img1.jpg' %}">
+		<!--
+					img from "http://hanzatower.pl/"
+				-->
+	</div>
+{% endblock %}
+{% block main %}
+	{% for hotel in hotels %}
+		<h2><strong>Hotel {{hotel.name}}</strong></h2>
+		<h3><strong>Contact Details</strong></h3>
+		<strong>Adress:</strong> {{hotel.street}}  {{hotel.postCode}} {{hotel.city}}</br>
+		<strong>Phone:</strong> {{hotel.phone}}</br>
+		<strong>Email:</strong> {{hotel.email}}</br>
+	{% endfor %}
+	<p>Feel free to call us or write an email! We're here for you!</p>
+{% endblock %}
