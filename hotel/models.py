@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils import timezone
-"""from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 from django.db.models.signals import post_save
-from django.dispatch import receiver"""
+from django.dispatch import receiver
 # Create your models here.
 
 
@@ -41,17 +41,16 @@ class Room(models.Model):
                 %s Rented: %s Price: %d Description: %s'%(self.number, self.roomType.typeID, self.roomType.name, self.hotelName.name,
                                                             self.roomType.capacity, self.rented, self.roomType.price, self.roomType.description)
 
-"""
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete = models.CASCADE)
     name = models.CharField(max_length = 100)
     surname = models.CharField(max_length = 100)
     phone = models.CharField(max_length = 9)
-    email = models.EmailField()
 
     def __str__(self):
-        return 'Nickname: %s Name: %s Surname: %s Phone: %s Email: %s'%(self.user, self.name, self.surname,
-                                                                        self.phone, self.email)
+        return 'Nickname: %s Name: %s Surname: %s Phone: %s Email: %s'%(self.user.username, self.name, self.surname,
+                                                                        self.phone, self.user.email)
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
@@ -61,7 +60,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
-"""
+
 
 class Reservation(models.Model):
     reservationID = models.AutoField(primary_key = True)

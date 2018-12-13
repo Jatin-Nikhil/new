@@ -1,0 +1,20 @@
+{% extends "hotel/base.html" %}
+{% load static %}
+
+{% block title %} My Booked Rooms Hotel Europa{% endblock %}
+
+{% block main %}
+	<div id = "center">
+		<h2><strong>My Bookings</h2></strong>
+		{% for booking in bookings %}
+			<h2>Reservation number: {{ booking.reservationID }}</h2>
+			<h2>Name: {{ booking.name }}</h2>
+			<h2>Surname: {{ booking.surname }}</h2>
+			<h2>Book in date: {{ booking.bookIn }}</h2>
+			<h2>Book out date: {{ booking.bookOut }}</h2>
+			<h2>Room type: {{ booking.roomType }}</h2>
+			<h2>Price: {{ booking.price }}</strong></h2><br/><br/>
+		{% endfor %}
+	</div>
+{% endblock %}
+	

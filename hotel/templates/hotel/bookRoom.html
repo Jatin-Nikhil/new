@@ -6,19 +6,19 @@
 {% block header %}
 <script>
 $( function() {
-$( "#id_bookIn" ).datepicker({ minDate: 0, maxDate: "+24M", dateFormat: 'dd.mm.yy',});
-$( "#id_bookOut" ).datepicker({ minDate: 0, maxDate: "+24M", dateFormat: 'dd.mm.yy',});
+$( "#id_bookIn" ).datepicker({ minDate: 0, maxDate: "+24M", dateFormat: 'yy-mm-dd',});
+$( "#id_bookOut" ).datepicker({ minDate: 0, maxDate: "+24M", dateFormat: 'yy-mm-dd',});
 } );
 </script>
 {% endblock %}
 {% block main %}
 	<div id = "center">
-   		<h2><strong>Book a Room</h2></strong>
-   		<form method="POST" class="post-form">
-    		{% csrf_token %}
-       		{{ form.as_p }}
-        	<button type="submit">Book it</button>
-    	</form>
-    </div>
+		<h2><strong>Book a Room</h2></strong>
+		<form method="POST" class="post-form">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Book it</button>
+		</form>
+	</div>
 {% endblock %}
 	

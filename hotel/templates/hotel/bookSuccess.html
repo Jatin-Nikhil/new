@@ -4,14 +4,15 @@
 {% block title %} Succesful Booking Hotel Europa{% endblock %}
 
 {% block main %}
-	<div id = "login">
-		<h2><strong>Thanks for entrusting us!</strong></h2>
-    	<h2><strong>Reservation number: {{ receipts.reservationID }}</strong></h2>
-    	<h2><strong>Name: {{ receipts.name }}</strong></h2>
-    	<h2><strong>Surname: {{ receipts.surname }}</strong></h2>
-    	<h2><strong>Book in date: {{ receipts.bookIn }}</strong></h2>
-    	<h2><strong>Book out date: {{ receipts.bookOut }}</strong></h2>
-    	<h2><strong>Price: {{ receipts.price }}</strong></h2>
-	</div>
+    <div id = "center">
+        <h2><strong> Thanks for entrusting us!</h2>
+        <h2>Reservation number: {{ receipts.reservationID }}</h2>
+        <h2>Name: {{ receipts.name }}</h2>
+        <h2>Surname: {{ receipts.surname }}</h2>
+        <h2>Book in date: {{ receipts.bookIn }}</h2>
+        <h2>Book out date: {{ receipts.bookOut }}</h2>
+        <h2>Room type: {{ receipts.roomType }}</h2>
+        <h2>Price: {{ receipts.price }}</strong></h2>
+    </div>
 {% endblock %}
-	
+    
